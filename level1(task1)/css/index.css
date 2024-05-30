@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+/* background video*/
+#myVideo {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+}
+/*nav bar */
+nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    z-index: 999;
+    position: sticky;
+}
+.nav-bar .inner-nav{
+    background-color: aliceblue;
+    border-radius:4rem ;
+    width: 70vw;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+/*logo*/
+.nav-bar .inner-nav .logo {
+    margin-left: 0.8rem;
+    text-align: center;
+    overflow-wrap: break-word;
+    inline-size: 140px;
+}
+.inner-nav .logo strong {
+    text-transform: uppercase;   
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:rgb(4, 53, 53); 
+}
+.inner-nav .logo span {
+    font-size: 1.8rem;
+    text-transform:uppercase;   
+    color:aqua;
+    font-weight: 600;
+}
+.nav-bar .inner-nav .listing{
+    display:flex;
+    padding: 1rem 3rem;
+    justify-content:center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+li > a{
+    color:rgb(4, 53, 53);
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+li > a:hover{
+    color: aqua;
+    text-decoration: underline;
+    transition: all 0.5s;
+}
+/*hero-section*/
+.hero-section{
+    color:aliceblue;
+    height:100%;
+    position:relative;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+.box:before, .box:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color:aqua;
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 35rem 0 0  aqua;
+}
+.box:before {
+    left: 2rem;
+    top: 2rem;
+}
+.box:after {
+    right: 2rem;
+    top: 2rem;
+}
+.box .left-part , .right-part{
+    flex-basis: 50%;
+    margin-top: 5rem;
+}
+
+.box .heading{
+    font-size: 4rem;
+    text-shadow: 1px 1px 8px aqua;
+    color:aqua;
+    line-height: 1;
+}
+.hero-section .box .paragraph{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+.hero-section .box .paragraph .passage{
+    font-size: 1.3rem;
+    max-width: 60%;
+    font-weight: 500;
+    text-transform:capitalize;
+    line-height: 1.5; 
+}
+/*form*/
+#emailCheckbox {
+    display: none;
+}
+#emailCheckbox:checked ~ #emailInput {
+    display: none;
+}
+#emailCheckbox:checked ~ .btn {
+    display: none;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.paragraph form input{
+    margin-top: 1.5rem;
+    width:20vw;
+    height:5vh;
+    padding-left: 0.2rem;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid aqua;
+    border-radius:0.5rem;
+}
+::placeholder{
+    color: aliceblue;
+    text-transform: capitalize;
+}
+.paragraph form input:focus{
+    background-color:transparent;
+    color:aliceblue;
+}
+.paragraph button{
+    margin-top: 1rem;
+    padding:0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    background-color: aqua;
+    border: none;
+    border-radius: 1rem;
+}
+.paragraph button:hover{
+    background-color: transparent;
+    color: aqua;
+    border: 1px solid aqua;
+}
+.box .right-part .image{
+    width: 100%;
+}
+.box .right-part .image img{
+    max-width:60%;
+    object-fit:contain;
+    border-radius:2rem;
+    box-shadow: 0 0 30px 4px aliceblue;
+}
