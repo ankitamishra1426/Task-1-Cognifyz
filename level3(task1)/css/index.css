@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(0deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: "Playfair Display", serif;
+}
+.main-container{
+   padding: 1rem 0;
+}
+.main-container .main-heading{
+    border:0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.main-heading .head{
+    border-bottom: 2px solid rgb(93, 36, 93);
+    padding: 0.5rem 10rem;
+    display: flex;
+    flex-direction:row;
+    gap: 0.8rem;
+}
+.head h1{
+    color: rgb(156, 12, 156);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2rem;
+}
+.head strong{
+    color:rgb(84, 23, 84);
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 600;
+}
+.main-container .inner-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    width: 100%;
+    padding:2.8rem 0.6rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto ;
+}
+.inner-container .images{
+    flex-basis: 20%;
+    opacity: 0.85;
+    cursor: pointer;
+}
+.inner-container .images:hover{
+    opacity: 1;
+}
+.inner-container .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid purple;
+    box-shadow: 0 0 10px 4px grey;
+}
+.lightbox{
+   position:fixed;
+   display: none;
+   background-color: transparent;
+   backdrop-filter: blur(10px);
+   width: 100%;
+   height: 100%;
+   top:0;
+   left:0;
+   overflow:auto;
+}
+.lightbox-element{
+    position: relative;
+    width:35%;
+    height:58%;
+    margin:5% auto;
+    margin-top: 100px;
+}
+.lightbox-element img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.lightbox-back,.lightbox-next{
+ position: absolute;
+ background-color: rgba(128, 0, 128,0.5);
+ color: aliceblue;
+ font-size: 1rem;
+ padding: 1rem;
+ top:45%;
+ cursor: pointer;
+}
+.lightbox-back{
+left:-12%;
+}
+.lightbox-next{
+    right:-12%;
+}
+/*screen sizing*/
+
+@media screen and (max-width:2560px){
+    .head h1{
+    font-size: 4rem;
+   }
+   .main-container .inner-container{
+    padding:4rem 1rem;
+    gap:4rem;
+   }
+   .lightbox-element{
+    margin-top:10rem;
+    width:60%;
+    height:60%;
+}
+   .lightbox-element img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+   }
+   
+   .lightbox-back,.lightbox-next{
+    padding: 1rem;
+    font-size: 1rem;
+   }
+   .lightbox-back{
+    left:16%;
+   }
+    .lightbox-next{
+    right:16%;
+   }
+}
+
+@media screen and (max-width:1024px) {
+    .main-heading .head{
+        padding: 0 5rem;
+    }
+    .head h1{
+        font-size: 2.5rem;
+    }
+    .inner-container .images{
+        flex-basis:22% ;
+    }
+    .lightbox-back,.lightbox-next{
+        padding:0.5rem;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .main-heading .head{
+        padding: 0 2.5rem;
+    }
+    .head h1{
+        font-size:2rem;
+    }
+    .main-container .inner-container{
+        gap:2rem;
+    }
+    .inner-container .images{
+        flex-basis:25% ;
+    }
+  .lightbox-element{
+        width:40%;
+        height:50%;
+        margin:20% auto;
+    }
+    .lightbox-back,.lightbox-next{
+        padding:0.3rem;
+        font-size:1rem;
+    }
+}
